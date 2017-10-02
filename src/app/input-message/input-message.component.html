@@ -1,0 +1,8 @@
+<div class="input-message">
+    <input class="input-message__content"
+           placeholder="Quoi de neuf ?"
+           autofocus="true"
+           #content
+           (keyup.enter)="addMessage(content)">
+  </div>
+  <span>{{message}}</span>

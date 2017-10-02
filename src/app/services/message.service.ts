@@ -14,6 +14,7 @@ export class MessageService {
   }
 
   createMessage(data): void {
+    console.log(data);
     this.messages.push(data);
   }
 }

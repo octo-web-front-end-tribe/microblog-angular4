@@ -1,11 +1,15 @@
+import { MessageService } from './services/message.service';
+import { InputMessageComponent } from './input-message/input-message.component';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        InputMessageComponent
       ],
+      providers : [MessageService]
     }).compileComponents();
   }));
   it('should create the app', async(() => {
