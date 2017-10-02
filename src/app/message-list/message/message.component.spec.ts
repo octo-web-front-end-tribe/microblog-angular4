@@ -16,10 +16,8 @@ describe('MessageComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MessageComponent);
     component = fixture.componentInstance;
+    component.message = {id: 42, author: 'flm', content: 'message content'};
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

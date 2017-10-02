@@ -1,3 +1,4 @@
+import { MessageService } from './../services/message.service';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MessageListComponent } from './message-list.component';
@@ -8,7 +9,8 @@ describe('MessageListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MessageListComponent ]
+      declarations: [MessageListComponent],
+      providers: [{ provide: MessageService, useValue: {} }],
     })
     .compileComponents();
   }));
@@ -17,9 +19,5 @@ describe('MessageListComponent', () => {
     fixture = TestBed.createComponent(MessageListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
   });
 });
