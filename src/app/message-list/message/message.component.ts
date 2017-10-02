@@ -1,4 +1,4 @@
-import { Message } from './../../models/message';
+import { Message } from '../../shared/message';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

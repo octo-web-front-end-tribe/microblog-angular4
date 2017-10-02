@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs/Observable';
-import { MessageService } from './../services/message.service';
+import { MessageService } from '../shared/message.service';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputMessageComponent } from './input-message.component';

@@ -1,6 +1,6 @@
 import { MessageComponent } from './message-list/message/message.component';
 import { MessageListComponent } from './message-list/message-list.component';
-import { MessageService } from './services/message.service';
+import { MessageService } from './shared/message.service';
 import { InputMessageComponent } from './input-message/input-message.component';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';

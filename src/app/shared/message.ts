@@ -1,5 +1,5 @@
 export class Message {
-  id: number;
+  id?: number;
   author: string;
   content: string;
 }

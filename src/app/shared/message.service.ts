@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { Http } from '@angular/http';
-import { Message } from './../models/message';
+import { Message } from './message';
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -19,8 +19,8 @@ export class MessageService {
       });
   }
 
-  createMessage(data): Observable<any> {
-    return this.http.post(this.messagesUrl, data)
+  createMessage(message: Message): Observable<any> {
+    return this.http.post(this.messagesUrl, message)
       .map(res => {
         this.messages.push(res.json());
       });

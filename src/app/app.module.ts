@@ -1,6 +1,6 @@
 import { HttpModule } from '@angular/http';
 import { InputMessageComponent } from './input-message/input-message.component';
-import { MessageService } from './services/message.service';
+import { MessageService } from './shared/message.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 

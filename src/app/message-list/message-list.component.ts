@@ -1,6 +1,6 @@
-import { MessageService } from './../services/message.service';
+import { MessageService } from '../shared/message.service';
 import { Component, OnInit } from '@angular/core';
-import { Message } from '../models/message';
+import { Message } from '../shared/message';
 
 
 @Component({
