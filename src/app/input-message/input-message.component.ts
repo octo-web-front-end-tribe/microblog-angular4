@@ -7,8 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input-message.component.css']
 })
 export class InputMessageComponent implements OnInit {
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit() {
+  }
+
+  addMessage(content) {
+    this.messageService.createMessage({
+      author: 'John Doe',
+      content: content.value
+    });
+
+    content.value = null;
   }
 }
