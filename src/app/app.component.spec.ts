@@ -13,7 +13,7 @@ describe('AppComponent', () => {
         MessageListComponent,
         MessageComponent
       ],
-      providers : [MessageService]
+      providers: [{ provide: MessageService, useValue: {} }]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

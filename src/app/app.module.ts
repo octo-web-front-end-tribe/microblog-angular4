@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { InputMessageComponent } from './input-message/input-message.component';
 import { MessageService } from './services/message.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +16,8 @@ import { MessageComponent } from './message-list/message/message.component';
     MessageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
