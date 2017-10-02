@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class MessageService {
-
-  messages: Message[] = [ {id: 1, author: 'Bob', content: 'Hello' }, {id: 2, author: 'Alice', content: 'Hi' }];
+  messagesUrl = 'http://microblog-api.herokuapp.com/api/messages';
+  messages: Message[] = [];
 
   constructor() {
   }
