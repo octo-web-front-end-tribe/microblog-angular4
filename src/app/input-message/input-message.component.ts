@@ -16,6 +16,7 @@ export class InputMessageComponent implements OnInit {
     this.messageService.createMessage({
       author: 'John Doe',
       content: content.value
+    }).subscribe(res => {
     });
 
     content.value = null;

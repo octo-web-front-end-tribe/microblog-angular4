@@ -19,7 +19,10 @@ export class MessageService {
       });
   }
 
-  createMessage(data): void {
-
+  createMessage(data): Observable<any> {
+    return this.http.post(this.messagesUrl, data)
+      .map(res => {
+        this.messages.push(res.json());
+      });
   }
 }

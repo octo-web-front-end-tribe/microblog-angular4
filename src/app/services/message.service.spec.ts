@@ -60,4 +60,19 @@ describe('MessageService', () => {
         expect(response).toEqual([{ id: 1, content: 'fake content', author: 'fhi' }]);
       });
     })));
+
+  it('#createMessage should post new message and add it to `messages` property', fakeAsync(inject([Http],
+    (http: Http) => {
+
+      service.messagesUrl = 'http://fake.base.url';
+
+      const message = {content: 'hello world', author: 'abc'};
+
+      const spy = spyOn(http, 'post').and.callThrough();
+
+      service.createMessage(message).subscribe(() => {
+        expect(spy).toHaveBeenCalledWith('http://fake.base.url', message);
+        expect(service.messages).toEqual([{ id: 1, content: 'hello world', author: 'abc' }]);
+      });
+    })));
 });
